@@ -7,7 +7,7 @@ const client = new ApolloClient({
   link: new HttpLink({
     uri: "https://graphql.fauna.com/graphql",
     headers: {
-      Authorization: `Bearer ${process.env.FAUNADB_SERVER_KEY}`,
+      Authorization: `Bearer ${process.env.GATSBY_FAUNADB_SERVER_KEY}`,
     },
     fetch,
   }),
