@@ -1,0 +1,17 @@
+type Message {
+    message: String!
+    author: Author! @relation
+    created: String!
+}
+
+type Author {
+    name: String!
+    messages: [Message] @relation
+}
+
+type Query {
+    allMessages: [Message!]
+    allNewMessages(filter: TableMessageFilterInput ): [Message!]
+    allAuthors: [Author!]
+}
+
